@@ -8,6 +8,6 @@ My first repo encompasses all I have learnt in SoftUni starting as from Jul 2022
   - 'For' and 'While' Loops
   - Nested Loops
   
-  2. Programming Fundamentals (Python)
-    - Conditional Statements and loops
+ 2. Programming Fundamentals (Python)
+  - Conditional Statements and loops
     
