@@ -1,13 +1,12 @@
-# input_string = ''
-#
-# while input_string != 'End':
-#     input_string = input()
-#     for char in input_string:
-#         if input_string == 'SoftUni':
-#             continue
-#         else:
-#             print(char * 2, end='')
-#
-#     input_string = input()
+char = input()
+
+while char != 'End':
+    current_word = ''
+    if char != 'SoftUni':
+        for letter in char:
+            current_word += letter * 2
+        print(f'{current_word}')
+    char = input()
+
 
 
