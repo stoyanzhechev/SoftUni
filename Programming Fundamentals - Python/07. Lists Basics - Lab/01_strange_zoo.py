@@ -2,6 +2,6 @@ tail = input()
 body = input()
 head = input()
 
-meercat = [head, body, tail]
+animal = [head, body, tail]
 
-print(meercat)
+print(animal)
