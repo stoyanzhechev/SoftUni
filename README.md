@@ -11,5 +11,6 @@ My first repo encompasses all I have learnt in SoftUni starting as from Jul 2022
  2. Programming Fundamentals (Python)
   - Conditional Statements and loops
   - Data Types and Variables
+  - Lists Basics
   
     
