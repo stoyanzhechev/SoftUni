@@ -22,8 +22,6 @@ for event in list_of_events:
             print(f"You earned {number} coins.")
         else:
             total_energy += 50
-            if total_energy > 100:
-                total_energy = 100
             print(f"You had to rest!")
     else:
         if total_coins >= number:
