@@ -5,5 +5,5 @@ command = input()
 
 while command != password:
     command = input()
-else:
-    print(f'Welcome {username}!')
+
+print(f'Welcome {username}!')
