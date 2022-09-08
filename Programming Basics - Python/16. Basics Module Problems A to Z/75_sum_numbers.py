@@ -1,6 +1,7 @@
 input_number = int(input())
 
 total_sum = 0
+
 while total_sum < input_number:
     current_number = int(input())
     total_sum += current_number
