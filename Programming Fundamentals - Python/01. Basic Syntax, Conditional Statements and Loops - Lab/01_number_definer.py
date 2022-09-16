@@ -9,10 +9,11 @@ elif number > 0:
         print('large positive')
     else:
         print('positive')
-else:
-    if abs(number) < 1:
+elif number < 0:
+    if number > -1:
         print('small negative')
-    elif abs(number) > 1000000:
+    elif number < -1000000:
         print('large negative')
     else:
         print('negative')
+
