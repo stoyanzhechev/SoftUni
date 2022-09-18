@@ -1,6 +1,10 @@
-name = input()
+age = int(input())
 
-if name == 'Johnny':
-    print('Hello, my love!')
+if age <= 14:
+    print('drink toddy')
+elif age <= 18:
+    print('drink coke')
+elif age <= 21:
+    print('drink beer')
 else:
-    print(f'Hello, {name}!')
+    print('drink whisky')
