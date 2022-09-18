@@ -1,10 +1,13 @@
 age = int(input())
+drink_type = ''
 
 if age <= 14:
-    print('drink toddy')
+    drink_type = 'toddy'
 elif age <= 18:
-    print('drink coke')
+    drink_type = 'coke'
 elif age <= 21:
-    print('drink beer')
+    drink_type = 'beer'
 else:
-    print('drink whisky')
+    drink_type = 'whisky'
+    2
+print(f'drink {drink_type}')
