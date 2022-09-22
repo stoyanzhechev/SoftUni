@@ -8,5 +8,5 @@ for i in range(messages_count):
         print('How are you?')
     elif current_message < 88:
         print('GREAT!')
-    elif current_message > 88:
+    else:
         print('Bye.')
