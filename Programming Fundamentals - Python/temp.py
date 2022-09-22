@@ -9,5 +9,5 @@ elif age <= 21:
     drink_type = 'beer'
 else:
     drink_type = 'whisky'
-    2
+    
 print(f'drink {drink_type}')
