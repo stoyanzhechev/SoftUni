@@ -1,17 +1,12 @@
-command = input()
+char = input()
 
-while command != 'Welcome!':
-    if command == 'Voldemort':
-        print("You must not speak of that name!")
-        break
-    if len(command) < 5:
-        print(f"{command} goes to Gryffindor.")
-    elif len(command) == 5:
-        print(f"{command} goes to Slytherin.")
-    elif len(command) == 6:
-        print(f"{command} goes to Ravenclaw.")
-    else:
-        print(f"{command} goes to Hufflepuff.")
-    command = input()
-else:
-    print("Welcome to Hogwarts.")
+while char != 'End':
+    current_word = ''
+    if char != 'SoftUni':
+        for letter in char:
+            current_word += letter * 2
+        print(f'{current_word}')
+    char = input()
+
+
+
