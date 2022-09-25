@@ -1,12 +1,7 @@
-char = input()
+first_name = input()
+second_name = input()
+delimiter = input()
 
-while char != 'End':
-    current_word = ''
-    if char != 'SoftUni':
-        for letter in char:
-            current_word += letter * 2
-        print(f'{current_word}')
-    char = input()
-
+print(f'{first_name}{delimiter}{second_name}')
 
 
