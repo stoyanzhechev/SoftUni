@@ -1,7 +1,7 @@
-first_name = input()
-second_name = input()
-delimiter = input()
+meters = int(input())
 
-print(f'{first_name}{delimiter}{second_name}')
+meters_to_kilometers = meters / 1000
+
+print(f'{meters_to_kilometers:.2f}')
 
 
