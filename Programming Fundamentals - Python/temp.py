@@ -1,7 +1,4 @@
-meters = int(input())
+gbp_amount = int(input())
+usd_amount = gbp_amount * 1.31
 
-meters_to_kilometers = meters / 1000
-
-print(f'{meters_to_kilometers:.2f}')
-
-
+print(f'{usd_amount:.3f}')
