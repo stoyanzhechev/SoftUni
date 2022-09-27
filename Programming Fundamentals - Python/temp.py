@@ -1,13 +1,8 @@
-age = int(input())
-drink_type = ''
+centuries = int(input())
 
-if age <= 14:
-    drink_type = 'toddy'
-elif age <= 18:
-    drink_type = 'coke'
-elif age <= 21:
-    drink_type = 'beer'
-else:
-    drink_type = 'whisky'
-    2
-print(f'drink {drink_type}')
+years = centuries * 100
+days = int(years * 365.2422)
+hours = days * 24
+minutes = hours * 60
+
+print(f'{centuries} centuries = {years} years = {days} days = {hours} hours = {minutes} minutes')
