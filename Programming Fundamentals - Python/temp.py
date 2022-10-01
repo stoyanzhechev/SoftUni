@@ -1,5 +1,6 @@
-start_character = int(input())
-end_character = int(input())
+number = int(input())
 
-for char in range(start_character, end_character + 1):
-    print(chr(char), end=' ')
+for first_char in range(number):
+    for second_char in range(number):
+        for third_char in range(number):
+            print(f'{chr(97 + first_char)}{chr(97 + second_char)}{chr(97 + third_char)}')
