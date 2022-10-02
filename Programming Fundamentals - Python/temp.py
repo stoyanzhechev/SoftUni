@@ -1,13 +1,27 @@
-number_of_lines = int(input())
-key_word = input()
-initial_list = []
-key_word_list = []
+numbers_count = int(input())
+even_list = []
+odd_list = []
+positives_list = []
+negatives_list = []
 
-for sentences in range(number_of_lines):
-    current_sentence = input()
-    initial_list.append(current_sentence)
-    if key_word in current_sentence:
-        key_word_list.append(current_sentence)
+for i in range(numbers_count):
+    current_number = int(input())
+    if current_number % 2 == 0:
+        even_list.append(current_number)
+    else:
+        odd_list.append(current_number)
+    if current_number >= 0:
+        positives_list.append(current_number)
+    else:
+        negatives_list.append(current_number)
 
-print(initial_list)
-print(key_word_list)
+command = input()
+
+if command == 'even':
+    print(even_list)
+elif command == 'odd':
+    print(odd_list)
+elif command == 'positive':
+    print(positives_list)
+elif command == 'negative':
+    print(negatives_list)
