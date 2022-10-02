@@ -1,6 +1,7 @@
-meerkat = []
-for i in range(3):
-    animal_part = input()
-    meerkat.append(animal_part)
+number_of_lines = int(input())
+new_list = []
 
-print(meerkat[::-1])
+for current_line in range(number_of_lines):
+    line = input()
+    new_list.append(line)
+print(new_list)
