@@ -1,6 +1,7 @@
-list_of_numbers = input().split()
+numbers_list = input().split()
 opposite_numbers_list = []
-for element in list_of_numbers:
+
+for element in numbers_list:
     current_number = -int(element)
     opposite_numbers_list.append(current_number)
 
