@@ -1,8 +1,9 @@
-numbers_list = input().split()
-opposite_numbers_list = []
+factor = int(input())
+count = int(input())
+list_of_numbers = []
 
-for element in numbers_list:
-    current_number = -int(element)
-    opposite_numbers_list.append(current_number)
+for i in range(1, count + 1):
+    current_number = factor * i
+    list_of_numbers.append(current_number)
 
-print(opposite_numbers_list)
+print(list_of_numbers)
