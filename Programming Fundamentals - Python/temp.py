@@ -1,20 +1,18 @@
-team_a = ['A-1', 'A-2', 'A-3', 'A-4', 'A-5', 'A-6', 'A-7', 'A-8', 'A-9', 'A-10', 'A-11']
-team_b = ['B-1', 'B-2', 'B-3', 'B-4', 'B-5', 'B-6', 'B-7', 'B-8', 'B-9', 'B-10', 'B-11']
-players = input().split()
-game_terminated = False
+money_list = input().split(', ')
+beggars_count = int(input())
+final_sums_list = []
+money_list_as_digits = []
+starting_index = 0
 
-for player in players:
-    if player in team_a:
-        team_a.remove(player)
-    elif player in team_b:
-        team_b.remove(player)
-    if len(team_a) < 7 or len(team_b) < 7:
-        game_terminated = True
-        break
+for element in money_list:
+    money_list_as_digits.append(int(element))
 
-if not game_terminated:
-    print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
-else:
-    print(f"Team A - {len(team_a)}; Team B - {len(team_b)}")
-    print("Game was terminated")
+while starting_index < beggars_count:
+    current_beggar_sum = 0
 
+    for current_index in range(starting_index, len(money_list_as_digits), beggars_count):
+        current_beggar_sum += money_list_as_digits[current_index]
+    final_sums_list.append(current_beggar_sum)
+    starting_index += 1
+
+print(final_sums_list)
