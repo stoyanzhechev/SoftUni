@@ -1,8 +1,9 @@
-initial_list = input().split()
+factor = int(input())
+count = int(input())
 output_list = []
 
-for element in initial_list:
-    current_number = -int(element)
+for i in range(1, count + 1):
+    current_number = i * factor
     output_list.append(current_number)
 
 print(output_list)
