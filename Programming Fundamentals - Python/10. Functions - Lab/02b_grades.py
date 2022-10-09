@@ -10,5 +10,6 @@ def grade_type(grade):
     elif grade <= 6.00:
         return 'Excellent'
 
+
 grade = float(input())
 print(grade_type(grade))
