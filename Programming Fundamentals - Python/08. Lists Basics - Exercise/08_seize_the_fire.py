@@ -5,6 +5,7 @@ total_fire = 0
 condition = False
 
 print('Cells: ')
+
 for current_fire in fire_cells:
     fire_info = current_fire.split(' = ')
     fire_degree = fire_info[0]

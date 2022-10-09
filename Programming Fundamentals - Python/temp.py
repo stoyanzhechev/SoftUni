@@ -1,17 +1,42 @@
-initial_loot_list = input().split('|')
-command = input()
-final_loot_list = initial_loot_list
+collection_of_items = input().split('|')
+budget = float(input())
+profit = 0
+sum_of_sold_items = 0
+condition = False
 
-while command != 'Yohoho!':
-    command_action = command.split()
-    if command_action[0] == 'Loot':
-        pass
-    elif command_action[0] == 'Drop':
-        if int(command_action[1]) in initial_loot_list:
-            initial_loot_list.pop[int(command_action[1])]
-            dropped_item = initial_loot_list.pop[int(command_action[1])]
-            initial_loot_list.append(dropped_item)
-    elif command_action[0] == 'Steal':
-        pass
+for item in collection_of_items:
+    item_info = item.split('->')
+    item_type = item_info[0]
+    item_value = float(item_info[1])
+    condition = False
 
-    command= input()
+    if budget < item_value:
+        break
+
+    if item_type == 'Clothes' and item_value <= 50.00:
+        condition = True
+    elif item_type == 'Shoes' and item_value <= 35.00:
+        condition = True
+    elif item_type == 'Accessories' and item_value <= 20.50:
+        condition = True
+    else:
+        continue
+
+    if condition:
+        budget -= item_value
+        sold_item_price = item_value * 1.40
+        sum_of_sold_items += sold_item_price
+        profit += sold_item_price - item_value
+        print(f'{sold_item_price:.2f}', end=' ')
+print()
+print(f'Profit: {profit:.2f}')
+
+final_budget = budget + sum_of_sold_items
+
+if final_budget >= 150:
+    print('Hello, France!')
+else:
+    print('Not enough money.')
+
+
+
