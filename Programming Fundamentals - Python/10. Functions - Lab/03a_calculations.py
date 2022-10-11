@@ -1,4 +1,4 @@
-def calculation_fun(first_number, second_number, operator):
+def calculation_func(first_number, second_number, operator):
     if operator == 'add':
         return first_number + second_number
     elif operator == 'subtract':
@@ -13,4 +13,4 @@ operator = input()
 first_number = int(input())
 second_number = int(input())
 
-print(calculation_fun(first_number, second_number, operator))
+print(calculation_func(first_number, second_number, operator))
