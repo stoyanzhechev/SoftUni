@@ -1,7 +1,6 @@
 input_string = input()
 number_of_repetitions = int(input())
 
-output_string = lambda a, b: a * b
-result = output_string(input_string, number_of_repetitions)
+result = lambda input_string, number_of_repetitions: input_string * number_of_repetitions
 
-print(result)
+print(result(input_string, number_of_repetitions))
