@@ -1,8 +1,9 @@
 wagons_number = int(input())
 wagons_list = [0] * wagons_number
-command = input()
 
 while True:
+    command = input()
+
     if command == 'End':
         break
 
@@ -19,8 +20,6 @@ while True:
         wagon_index = int(current_command[1])
         people_count = int(current_command[2])
         wagons_list[wagon_index] -= people_count
-
-    command = input()
 
 print(wagons_list)
 
