@@ -1,6 +1,6 @@
 Hello everyone!
 
-My first repo encompasses all I have learnt in SoftUni starting as from Jul 2022 following the professional path for Python Full Stack Developers. In brief the 2-years journey includes:
+My first repo encompasses all I have learnt in the SoftUni Academy starting as from Jul 2022 following the professional path for Python Full Stack Developers. In brief the 2-years journey includes:
 
 1. Programming Basics (Python)
   - Basics of Python Syntax
@@ -15,5 +15,8 @@ My first repo encompasses all I have learnt in SoftUni starting as from Jul 2022
   - HTTP Basics
   - Lists Basics
   - HTML & CSS Basics
+  - Functions 
+  - Software Development Concepts
+  - Lists Advanced
   
     
