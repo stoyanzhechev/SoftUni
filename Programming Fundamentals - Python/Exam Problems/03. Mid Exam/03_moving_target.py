@@ -20,9 +20,9 @@ while command != 'End':
     elif command_action == 'Strike':
         command_radius = int(command[2])
         if 0 <= command_index - command_radius < len(targets_list) and 0 <= command_index + command_radius < len(targets_list):
-            targets_list.remove(targets_list[(command_index - command_radius):(command_index + command_radius)])
+            targets_list = [targets_list[i] for i in range(len(targets_list)) if i < command_index - command_radius or i > command_index + command_radius]
         else:
-            print('Strike missed')
+            print('Strike missed!')
     command = input()
 
 targets_list_converted_to_string = [str(num) for num in targets_list]
