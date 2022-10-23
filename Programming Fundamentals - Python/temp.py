@@ -1,25 +1,35 @@
-coffee_list = input().split()
-commands_number = int(input())
+command = input()
+chat_list = []
 
-for commands in range(0, commands_number):
-    command = input().split()
+while command != 'end':
+    command = command.split()
     command_action = command[0]
-    if command_action == 'Include':
-        coffee_list.append(command[1])
-    elif command_action == 'Remove':
-        number_of_coffees_to_remove = int(command[2])
-        if command[1] == 'first':
-            del coffee_list[:number_of_coffees_to_remove]
-        elif command[1] == 'last':
-            del coffee_list[len(coffee_list) - number_of_coffees_to_remove:]
-    elif command_action == 'Prefer':
-        first_coffee_index = int(command[1])
-        second_coffee_index = int(command[2])
-        if first_coffee_index < len(coffee_list) and second_coffee_index < len(coffee_list):
-            coffee_list[first_coffee_index], coffee_list[second_coffee_index] = \
-            coffee_list[second_coffee_index], coffee_list[first_coffee_index]
-    elif command_action == 'Reverse':
-        coffee_list.reverse()
+    command_message = command[1]
+    if command_action == 'Chat':
+        chat_list.append(command_message)
+    elif command_action == 'Delete':
+        if command_message in chat_list:
+            chat_list.remove(command_message)
+    elif command_action == 'Edit':
+        edited_message = command[2]
+        if command_message in chat_list:
+            for element in range(len(chat_list)):
+                if chat_list[element] == command_message:
+                    chat_list[element] = edited_message
+    elif command_action == 'Pin':
+        if command_message in chat_list:
+            command_message_index = chat_list.index(command_message)
+            removed_item = chat_list[command_message_index]
+            chat_list.remove(removed_item)
+            chat_list.append(removed_item)
+    if command_action == 'Spam':
+        message_index = 0
+        for index in range(len(command)):
+            current_message = command[message_index + index]
+            chat_list.append(current_message)
+            if 'Spam' in chat_list:
+                chat_list.remove('Spam')
 
-print('Coffees:')
-print(' '.join(coffee_list))
+    command = input()
+
+print('\n'.join(chat_list))
