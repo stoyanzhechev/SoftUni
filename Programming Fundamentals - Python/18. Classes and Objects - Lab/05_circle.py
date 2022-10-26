@@ -14,6 +14,7 @@ class Circle:
     def calculate_area_of_sector(self, angle):
         return Circle.__pi * self.radius ** 2 * (angle / 360)
 
+
 circle = Circle(10)
 angle = 5
 
