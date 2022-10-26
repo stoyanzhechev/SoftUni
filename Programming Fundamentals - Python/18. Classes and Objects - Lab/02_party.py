@@ -7,6 +7,7 @@ class Party:
     def __init__(self):
         self.people = []
 
+
     def invite(self, person):
        self.people.append(person)
 
