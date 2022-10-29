@@ -13,5 +13,3 @@ class Catalogue:
         string_for_return = f"Items in the {self.name} catalogue:\n"
         string_for_return += "\n".join(sorted(self.products))
         return string_for_return
-
-
