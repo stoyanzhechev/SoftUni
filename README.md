@@ -18,5 +18,6 @@ My first repo encompasses all I have learnt in the SoftUni Academy starting as f
   - Functions 
   - Software Development Concepts
   - Lists Advanced
+  - Objects and Classes
   
     
