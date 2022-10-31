@@ -1,16 +1,16 @@
-class Storage:
-    storage = []
+class Weapon:
+    def __init__(self, bullets):
+        self.bullets = bullets
 
-    def __init__(self, capacity):
-        self.capacity = capacity
+    def shoot(self):
+        if self.bullets > 0:
+            self.bullets -= 1
+            return 'shooting...'
+        else:
+            return 'no bullets left'
 
-    def add_product(self, product):
-        if len(Storage.storage) < self.capacity:
-            Storage.storage.append(product)
-
-    def get_products(self):
-        return Storage.storage
-
+    def __repr__(self):
+        return f"Remaining bullets: {self.bullets}"
 
 
 
