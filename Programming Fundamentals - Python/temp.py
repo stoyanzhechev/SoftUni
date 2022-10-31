@@ -1,16 +1,21 @@
-class Weapon:
-    def __init__(self, bullets):
-        self.bullets = bullets
+class Catalogue:
+    def __init__(self, name):
+        self.name = name
+        self.products = []
 
-    def shoot(self):
-        if self.bullets > 0:
-            self.bullets -= 1
-            return 'shooting...'
-        else:
-            return 'no bullets left'
+    def add_product(self, product_name):
+        self.products.append(product_name)
+
+    def get_by_letter(self, first_letter):
+        return [product for product in self.products if product.startswith(first_letter)]
 
     def __repr__(self):
-        return f"Remaining bullets: {self.bullets}"
+        string_for_return = f"Items in the {self.name} catalogue:\n"
+        string_for_return += "\n".join(sorted(self.products))
+        return string_for_return
+
+
+
 
 
 
