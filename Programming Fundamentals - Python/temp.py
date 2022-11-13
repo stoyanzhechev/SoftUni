@@ -1,18 +1,5 @@
-resources = {}
-
-while True:
-    current_resource = input()
-
-    if current_resource == 'stop':
-        break
-
-    current_quantity = int(input())
-
-    if current_resource not in resources.keys():
-        resources[current_resource] = 0
-    resources[current_resource] += current_quantity
-
-for resource, quantity in resources.items():
-    print(f"{resource} -> {quantity}")
-
-
+countries_list = input().split(', ')
+capitals_list = input().split(', ')
+result_dictionary = {countries_list[index]: capitals_list[index] for index in range(len(countries_list))}
+for country, capital in result_dictionary.items():
+    print(f'{country} -> {capital}')
