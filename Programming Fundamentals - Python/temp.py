@@ -1,12 +1,18 @@
-input_string = input().split()
-text_string = ''.join(input_string)
-result_dictionary = {}
+resources = {}
 
-for symbol in text_string:
-    if symbol not in result_dictionary:
-        result_dictionary[symbol] = 0
-    result_dictionary[symbol] += 1
-for char, occurrences in result_dictionary.items():
-    print(f"{char} -> {occurrences}")
+while True:
+    current_resource = input()
+
+    if current_resource == 'stop':
+        break
+
+    current_quantity = int(input())
+
+    if current_resource not in resources.keys():
+        resources[current_resource] = 0
+    resources[current_resource] += current_quantity
+
+for resource, quantity in resources.items():
+    print(f"{resource} -> {quantity}")
 
 
