@@ -13,3 +13,5 @@ for check in range(int(entry)):
         print(f'{searched_name} -> {found_number}')
     else:
         print(f'Contact {searched_name} does not exist.')
+
+
