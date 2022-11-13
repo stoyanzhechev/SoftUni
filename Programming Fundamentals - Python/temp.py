@@ -1,35 +1,24 @@
-items_dictionary = {'shards': 0, 'fragments': 0, 'motes': 0}
-current_items = input().split()
-legendary_is_obtained = False
+commands_number = int(input())
+users = {}
 
-while not legendary_is_obtained:
-    for index in range(0, len(current_items), 2):
-        value = int(current_items[index])
-        key = current_items[index + 1].lower()
-        if key not in items_dictionary.keys():
-            items_dictionary[key] = 0
-        items_dictionary[key] += value
-        if items_dictionary['shards'] >= 250:
-            legendary_is_obtained = True
-            items_dictionary['shards'] -= 250
-            print('Shadowmourne obtained!')
-        elif items_dictionary['fragments'] >= 250:
-            legendary_is_obtained = True
-            items_dictionary['fragments'] -= 250
-            print('Valanyr obtained!')
-        elif items_dictionary['motes'] >= 250:
-            legendary_is_obtained = True
-            items_dictionary['motes'] -= 250
-            print('Dragonwrath obtained!')
-        if legendary_is_obtained:
-            break
-    if legendary_is_obtained:
-        break
+for command in range(commands_number):
+    current_command = input().split()
+    command_action = current_command[0]
+    if command_action == 'register':
+        command_username = current_command[1]
+        command_license_plate = current_command[2]
+        if command_username in users.keys():
+            print(f"ERROR: already registered with plate number {command_license_plate}")
+        else:
+            users[command_username] = command_license_plate
+            print(f"{command_username} registered {command_license_plate} successfully")
+    elif command_action == 'unregister':
+        command_username = current_command[1]
+        if command_username not in users.keys():
+            print(f"ERROR: user {command_username} not found")
+        else:
+            del users[command_username]
+            print(f"{command_username} unregistered successfully")
 
-    current_items = input().split()
-
-for material, quantity in items_dictionary.items():
-    print(f"{material}: {quantity}")
-
-
-
+for username, license_plate_number in users.items():
+    print(f"{username} => {license_plate_number}")
