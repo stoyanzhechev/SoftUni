@@ -1,18 +1,7 @@
-courses = {}
+number_of_pieces = int(input())
+pieces_dict = {}
 command = input()
 
-while command != 'end':
-    command = command.split(' : ')
-    course = command[0]
-    student = command[1]
-    if course not in courses.keys():
-        courses[course] = []
-    courses[course].append(student)
-
+while command != 'Stop':
+    command = command.split('|')
     command = input()
-
-for course in courses.keys():
-    print(f'{course}: {len(courses[course])}')
-    for student in courses[course]:
-        print(f'-- {student}')
-
