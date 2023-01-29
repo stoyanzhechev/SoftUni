@@ -1,6 +1,4 @@
-a = int(input())
-b = int(input())
+inches = float(input())
+cm = inches * 2.54
 
-area = a * b
-
-print(area)
+print(cm)
