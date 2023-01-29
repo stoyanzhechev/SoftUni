@@ -1,11 +1,10 @@
-dog_food_count = int(input())
-cat_food_count = int(input())
+greening_area = float(input())
+price_per_sqm = 7.61
 
-dog_food_price = 2.50
-cat_food_price = 4
+total_price = greening_area * price_per_sqm
+discount = 0.18 * total_price
+discounted_price = 0.82 * total_price
 
-dog_food_total_price = dog_food_count * dog_food_price
-cat_food_total_price = cat_food_count * cat_food_price
-total_price = dog_food_total_price + cat_food_total_price
+print(f"The final price is: {discounted_price:.2f} lv.")
+print(f"The discount is: {discount} lv.")
 
-print(f"{total_price} lv.")
