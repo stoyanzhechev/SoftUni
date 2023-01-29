@@ -1,4 +1,3 @@
-inches = float(input())
-cm = inches * 2.54
+name = input()
 
-print(cm)
+print(f'Hello, {name}!')
