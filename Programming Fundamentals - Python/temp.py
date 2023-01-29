@@ -1,6 +1,7 @@
-first_name = input()
-last_name = input()
-age = input()
-town = input()
+architect_name = input()
+projects_count = int(input())
+time_per_project = 3
 
-print(f'You are {first_name} {last_name}, a {age}-years old person from {town}.')
+time_required = projects_count * time_per_project
+
+print(f'The architect {architect_name} will need {time_required} hours to complete {projects_count} project/s.')
