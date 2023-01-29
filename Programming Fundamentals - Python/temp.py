@@ -1,7 +1,11 @@
-architect_name = input()
-projects_count = int(input())
-time_per_project = 3
+dog_food_count = int(input())
+cat_food_count = int(input())
 
-time_required = projects_count * time_per_project
+dog_food_price = 2.50
+cat_food_price = 4
 
-print(f'The architect {architect_name} will need {time_required} hours to complete {projects_count} project/s.')
+dog_food_total_price = dog_food_count * dog_food_price
+cat_food_total_price = cat_food_count * cat_food_price
+total_price = dog_food_total_price + cat_food_total_price
+
+print(f"{total_price} lv.")
