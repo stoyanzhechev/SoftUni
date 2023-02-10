@@ -1,8 +1,17 @@
-pages_count = int(input())
-pages_per_hour = int(input())
-total_days_needed = int(input())
+pens_packets = int(input())
+markers_packets = int(input())
+detergent = int(input())
+discount_percentage = int(input())
 
-total_hours_needed = pages_count / pages_per_hour
-hours_per_day = total_hours_needed // total_days_needed
+pens_price = 5.80
+markers_price = 7.20
+detergent_price = 1.20
 
-print(int(hours_per_day))
+pens_total_price = pens_packets * pens_price
+markers_total_price = markers_packets * markers_price
+detergent_total_price = detergent * detergent_price
+
+total_price = pens_total_price + markers_total_price + detergent_total_price
+discounted_price = total_price * (100 - discount_percentage) / 100
+
+print(discounted_price)
