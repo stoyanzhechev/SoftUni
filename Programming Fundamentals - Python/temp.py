@@ -1,9 +1,8 @@
-deposit_amount = float(input())
-deposit_duration = int(input())
-annual_interest_rate = float(input())
+pages_count = int(input())
+pages_per_hour = int(input())
+total_days_needed = int(input())
 
-final_amount = deposit_amount + deposit_duration * (deposit_amount * (annual_interest_rate / 100)) / 12
+total_hours_needed = pages_count / pages_per_hour
+hours_per_day = total_hours_needed // total_days_needed
 
-print(final_amount)
-
-
+print(int(hours_per_day))
