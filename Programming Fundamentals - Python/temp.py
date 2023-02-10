@@ -1,17 +1,21 @@
-pens_packets = int(input())
-markers_packets = int(input())
-detergent = int(input())
-discount_percentage = int(input())
+nylon_quantity = int(input())
+paint_quantity = int(input())
+detergent_quantity = int(input())
+hours_needed = int(input())
 
-pens_price = 5.80
-markers_price = 7.20
-detergent_price = 1.20
+nylon_price = 1.50
+paint_price = 14.50
+detergent_price = 5.00
+plastic_bags_price = 0.40
 
-pens_total_price = pens_packets * pens_price
-markers_total_price = markers_packets * markers_price
-detergent_total_price = detergent * detergent_price
+nylon_cost = (nylon_quantity + 2) * nylon_price
+paint_cost = (paint_quantity * paint_price) * 1.10
+detergent_cost = detergent_quantity * detergent_price
 
-total_price = pens_total_price + markers_total_price + detergent_total_price
-discounted_price = total_price * (100 - discount_percentage) / 100
+total_cost = nylon_cost + paint_cost + detergent_cost + plastic_bags_price
+labor_price_per_hour = total_cost * 0.30
+total_labor_cost = hours_needed * labor_price_per_hour
 
-print(discounted_price)
+grand_total_cost = total_cost + total_labor_cost
+
+print(grand_total_cost)
