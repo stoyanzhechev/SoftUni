@@ -1,4 +1,8 @@
-usd_amount = float(input())
-bgn_amount = usd_amount * 1.79549
+from math import pi
 
-print(bgn_amount)
+
+rad = float(input())
+deg = (rad * 180) / pi
+
+print(deg)
+
