@@ -1,5 +1,8 @@
-degree = float(input())
+first_number = int(input())
+second_number = int(input())
 
-if degree >= 5:
-    print('Excellent!')
+if first_number > second_number:
+    print(first_number)
+else:
+    print(second_number)
 
