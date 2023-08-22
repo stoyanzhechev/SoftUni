@@ -1,8 +1,7 @@
-first_number = int(input())
-second_number = int(input())
+number = int(input())
 
-if first_number > second_number:
-    print(first_number)
+if number % 2 == 0:
+    print('even')
 else:
-    print(second_number)
+    print('odd')
 
