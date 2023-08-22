@@ -1,7 +1,7 @@
-number = int(input())
+password = input()
 
-if number % 2 == 0:
-    print('even')
+if password == 's3cr3t!P@ssw0rd':
+    print('Welcome')
 else:
-    print('odd')
+    print('Wrong password!')
 
